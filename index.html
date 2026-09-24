@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Interstate Quantum Hackathon 2026</title>
+<meta name="description" content="A two-day, hybrid quantum computing hackathon for students and researchers. Registration, agenda, challenge, and suggested reading." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><circle cx=%2216%22 cy=%2216%22 r=%2213%22 fill=%22%230A0F1F%22/><circle cx=%2216%22 cy=%2216%22 r=%2２6%２ fill=%２none%２ stroke=%２%２364DFDA%２ stroke-width=%２２%２/></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header" id="top">
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <img class="brand-mark" src="assets/logo.jpeg" alt="Interstate Quantum Hackathon logo" />
+      <span class="brand-text"><!-- EDIT: event name --->Interstate Quantum Hackathon 2026</span>
+    </a>
+
+    <nav class="site-nav" id="site-nav">
+      <a href="#institutions">Institutions</a>
+      <a href="#agenda">Agenda</a>
+      <a href="#challenge">Challenge</a>
+      <a href="#team">Team</a>
+      <a href="#reading">Reading</a>
+    </nav>
+
+    <div class="nav-actions">
+      <!-- EDIT: registration link -->
+      <a class="btn btn-primary btn-small" href="https://forms.cloud.microsoft/r/kvCgY5gF3X" target="_blank" rel="noopener">Register</a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+
+<main id="main">
+
+  <!-- ============ HERO / EVENT ANNOUNCEMENT ============ -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1><!-- EDIT: headline -->Quantum algorithms: from problem to hardware.</h1>
+        <p class="hero-sub">
+          <!-- EDIT: event description -->
+           <br><br>
+          The Interstate Quantum Hackathon for Beginners is a hands-on, three-day event where students from partner institutions come together to explore the exciting world of quantum computing. Working in teams of two to four, participants will learn the basics of quantum computing, develop quantum programs, and run their ideas on real quantum simulators.
+          No prior experience with quantum computing is required. If you have a basic working knowledge of Python and are curious about how quantum computers work, you have everything you need to get started.
+        </p>
+
+        <dl class="hero-meta">
+          <div>
+            <dt>Dates</dt>
+            <!-- EDIT: dates -->
+            <dd>October 22–24, 2026</dd>
+          </div>
+          <div>
+            <dt>Format</dt>
+            <!-- EDIT: location/format -->
+            <dd>Hybrid (partner institutions and online)</dd>
+          </div>
+          <div>
+            <dt>Team size</dt>
+            <!-- EDIT: team size -->
+            <dd>2–4 people</dd>
+          </div>
+        </dl>
+
+        <div class="hero-actions">
+          <!-- EDIT: registration link (appears twice on the page; keep both in sync) -->
+          <a class="btn btn-primary" href="https://forms.cloud.microsoft/r/kvCgY5gF3X" target="_blank" rel="noopener">Register to participate</a>
+          <a class="btn btn-ghost btn-small" href="#agenda">Agenda</a>
+          <a class="btn btn-ghost btn-small" href="https://example.com/your-flyer.pdf" target="_blank" rel="noopener">Flyer</a>
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <svg viewBox="0 0 600 420" class="circuit-svg" aria-hidden="true">
+          <!-- qubit wires -->
+          <line class="wire" x1="30" y1="70"  x2="570" y2="70" />
+          <line class="wire" x1="30" y1="160" x2="570" y2="160" />
+          <line class="wire" x1="30" y1="250" x2="570" y2="250" />
+          <line class="wire" x1="30" y1="340" x2="570" y2="340" />
+
+          <!-- connector between q1/q2 -->
+          <line class="connector" x1="270" y1="70" x2="270" y2="160" />
+          <!-- connector between q3/q4 -->
+          <line class="connector" x1="360" y1="250" x2="360" y2="340" />
+
+          <!-- single-qubit gates -->
+          <rect class="gate" x="100" y="52" width="36" height="36" rx="4"/>
+          <text class="gate-label" x="118" y="75"></text>
+
+          <rect class="gate" x="170" y="142" width="36" height="36" rx="4"/>
+          <text class="gate-label" x="188" y="165"></text>
+
+          <rect class="gate" x="410" y="52" width="36" height="36" rx="4"/>
+          <text class="gate-label" x="428" y="75"></text>
+
+          <rect class="gate" x="130" y="232" width="36" height="36" rx="4"/>
+          <text class="gate-label" x="148" y="255"></text>
+
+          <rect class="gate" x="460" y="322" width="36" height="36" rx="4"/>
+          <text class="gate-label" x="478" y="345"></text>
+
+          <!-- control / target dots -->
+          <circle class="control" cx="270" cy="70" r="7"/>
+          <circle class="target" cx="270" cy="160" r="11"/>
+          <line class="target-cross" x1="270" y1="149" x2="270" y2="171"/>
+          <line class="target-cross" x1="259" y1="160" x2="281" y2="160"/>
+
+          <circle class="control" cx="360" cy="250" r="7"/>
+          <circle class="target" cx="360" cy="340" r="11"/>
+          <line class="target-cross" x1="360" y1="329" x2="360" y2="351"/>
+          <line class="target-cross" x1="349" y1="340" x2="371" y2="340"/>
+
+          <!-- measurement markers -->
+          <g class="meter">
+            <rect x="520" y="52" width="36" height="36" rx="4"/>
+            <path d="M528 78 A10 10 0 0 1 548 78" />
+            <line x1="538" y1="78" x2="546" y2="64" />
+          </g>
+          <g class="meter">
+            <rect x="520" y="142" width="36" height="36" rx="4"/>
+            <path d="M528 168 A10 10 0 0 1 548 168" />
+            <line x1="538" y1="168" x2="546" y2="154" />
+          </g>
+          <g class="meter">
+            <rect x="520" y="232" width="36" height="36" rx="4"/>
+            <path d="M528 258 A10 10 0 0 1 548 258" />
+            <line x1="538" y1="258" x2="546" y2="244" />
+          </g>
+          <g class="meter">
+            <rect x="520" y="322" width="36" height="36" rx="4"/>
+            <path d="M528 348 A10 10 0 0 1 548 348" />
+            <line x1="538" y1="348" x2="546" y2="334" />
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTICIPATING INSTITUTIONS ============ -->
+  <section id="institutions" class="section">
+    <div class="section-inner">
+      <h2>Participating institutions</h2>
+      <p class="section-intro">
+        <!-- EDIT: institutions intro -->
+        Teams are forming now at these partner institutions. Studying or working somewhere else?
+        Register anyway — independent participants and mixed-institution teams are welcome.
+      </p>
+
+      <!-- EDIT: replace each <li> with your real institutions. To use a logo image instead of the
+           lettered badge, replace the <span class="badge">…</span> with
+           <img class="badge-img" src="assets/logos/your-file.svg" alt="Institution name"> -->
+      <ul class="institution-grid">
+        <li><img class="badge-img" src="assets/institute_logos/mtsu.png" alt="Middle Tennessee State University"><span class="inst-name">Middle Tennessee State University</span></li>
+        <li><img class="badge-img" src="assets/institute_logos/pu.png" alt="Purdue University"><span class="inst-name">Purdue University</span></li>
+        <li><img class="badge-img" src="assets/institute_logos/uwf.png" alt="University of West Florida"><span class="inst-name">University of West Florida</span></li>
+        <li><img class="badge-img" src="assets/institute_logos/fisk.png" alt="Fisk University"><span class="inst-name">Fisk University</span></li>
+        <li><img class="badge-img" src="assets/institute_logos/mmc.png" alt="Meharry Medical College"><span class="inst-name">Meharry Medical College</span></li>
+        <li><img class="badge-img" src="assets/institute_logos/uah.png" alt="University of Alabama at Huntsville"><span class="inst-name">University of Alabama at Huntsville</span></li>
+        <li><img class="badge-img" src="assets/institute_logos/tsu.png" alt="Tennessee State University"><span class="inst-name">Tennessee State University</span></li>
+        <li><img class="badge-img" src="assets/institute_logos/msu.png" alt="Missouri State University"><span class="inst-name">Missouri State University</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ AGENDA ============ -->
+  <section id="agenda" class="section section-alt">
+    <div class="section-inner">
+      <h2>Agenda</h2>
+      <p class="section-intro">
+        <!-- EDIT: agenda intro -->
+        <br><br> Training sessions run remotely in the weeks before the hackathon. All hackathon times are Eastern Time (ET).
+      </p>
+
+      <div class="agenda-grid">
+        <div class="agenda-day">
+          <h3><!-- EDIT: prep phase label -->Before the Hackathon</h3>
+          <ol class="timeline">
+            <li><span class="time">Sept 24 – Oct 3</span><span class="event">Registration</span></li>
+            <li><span class="time">Oct 5 – Oct 9<br>(Date/time TBD)</span><span class="event">Training 1 — Quantum Foundations</span></li>
+            <li><span class="time">Oct 12 – Oct 16<br>(Date/time TBD)</span><span class="event">Training 2 — Qiskit, Simulators &amp; Quantum Hardware</span></li>
+            <li><span class="time">Oct 19 – Oct 21<br>(Date/time TBD)</span><span class="event">Training 3 — VQE and QML</span></li>
+          </ol>
+        </div>
+
+        <div class="agenda-day">
+          <h3><!-- EDIT: hackathon phase label -->Hackathon Week</h3>
+          <ol class="timeline">
+            <li><span class="time">Oct 22<br>5:00 PM ET</span><span class="event">Hackathon launch — VQE project</span></li>
+            <li><span class="time">Oct 23<br>5:00 PM ET</span><span class="event">Keynote speaker (TBD) &amp; QML project launch</span></li>
+            <li><span class="time">Oct 24<br>9:00 AM – 4:00 PM ET</span><span class="event">Code and submit</span></li>
+            <li><span class="time">Oct 30<br>5:00 PM ET</span><span class="event">Closing ceremony</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CHALLENGE ============ -->
+  <section id="challenge" class="section">
+    <div class="section-inner challenge-grid">
+      <div class="challenge-copy">
+        <h2>This year's challenge</h2>
+        <p>
+          <!-- EDIT: challenge description -->
+          <br><br>The challenge is to build a functional prototype that runs on a quantum simulator, with bonus
+          points for anything that also runs on real quantum hardware. The full brief — problem statements,
+          starter notebooks, and judging criteria — is published in the challenge repository.
+        </p>
+        <p>
+          <!-- EDIT: judging note -->
+          Judging weighs technical depth, creativity of the approach, and how clearly the team can explain
+          what their quantum implementation improves upon the given prototype.
+        </p>
+      </div>
+
+      <div class="challenge-panel">
+        <ul class="fact-list">
+          <li><span class="fact-label">Challenge</span><span>VQE for quantum chemistry, quantum machine learning</span></li>
+          <li><span class="fact-label">Implementation</span><span>Noiseless and noisy hardware implementations</span></li>
+          <li><span class="fact-label">Prizes</span><span>Top three teams.</span></li>
+        </ul>
+        <!-- EDIT: challenge link -->
+        <a class="btn btn-primary" href="https://github.com/abhijit975/website-hackathon-26" target="_blank" rel="noopener">View the challenge brief (Inactive)</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Keynote Speaker ============ -->
+  
+  <section id="keynote" class="section section-alt">
+    <div class="section-inner">
+      <h2>Keynote Speaker</h2>
+      <p class="section-intro">
+        <!-- EDIT: agenda intro -->
+        <br><br> Our keynote speaker will share insights on the latest developments in quantum computing and how they are shaping the future of the field.
+        <br><br> Name of the keynote speaker and details will be announced soon.
+      </p>
+    </div>
+  </section>
+    
+
+  <!-- ============ TEAM ============ -->
+  <section id="team" class="section">
+    <div class="section-inner">
+      <h2>Organizers &amp; mentors</h2>
+      <p class="section-intro">
+        <!-- EDIT: team intro -->
+        The people running the event, your point of contact at each partner institution, and the mentors
+        who'll be on the floor throughout the event to help teams get unstuck.
+      </p>
+
+      <!-- EDIT: each group below is a <ul class="people-grid">. To add someone, copy an existing <li>.
+           To use a real photo, replace the src with your own image (e.g. assets/team/your-file.jpg) —
+           square images work best, they're cropped to a circle automatically. -->
+      <div class="team-group">
+        <h3>Executive Committee</h3>
+        <ul class="people-grid">
+          <li>
+            <img class="avatar-img" src="assets/team/ht.png" alt="Hanna Terletska">
+            <p class="person-name">Hanna Terletska</p>
+            <p class="person-role">MTSU</p>
+          </li>
+          <li>
+            <img class="avatar-img" src="assets/team/dliu.webp" alt="David Liu">
+            <p class="person-name">David Liu</p>
+            <p class="person-role">Purdue University</p>
+          </li>
+          <li>
+            <img class="avatar-img" src="assets/team/ac.jpg" alt="Abhijit Chakraborty">
+            <p class="person-name">Abhijit Chakraborty</p>
+            <p class="person-role">MTSU</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="team-group">
+        <h3>Organization Committee</h3>
+        <ul class="people-grid">
+          <li>
+            <img class="avatar-img" src="assets/team/jv.png" alt="John Villanova">
+            <p class="person-name">John Villanova</p>
+            <p class="person-role">MTSU</p>
+          </li>
+          <li>
+            <img class="avatar-img" src="assets/team/pc.png" alt="Pushpita Chatterjee">
+            <p class="person-name">Pushpita Chatterjee</p>
+            <p class="person-role">MMC</p>
+          </li>
+          <li>
+            <img class="avatar-img" src="assets/team/vp.png" alt="Varun Puram">
+            <p class="person-name">Varun Puram</p>
+            <p class="person-role">MTSU</p>
+          </li>
+          <li>
+            <img class="avatar-img" src="assets/team/nz.png" alt="Ning Zhang">
+            <p class="person-name">Ning Zhang</p>
+            <p class="person-role">Fisk University</p>
+          </li>
+          <li>
+            <img class="avatar-img" src="assets/team/lq.jpeg" alt="Lei Qian">
+            <p class="person-name">Lei Qian</p>
+            <p class="person-role">MMC</p>
+          </li>
+          <li>
+            <img class="avatar-img" src="assets/team/aw.png" alt="Aaron Wade">
+            <p class="person-name">Aaron Wade</p>
+            <p class="person-role">UWF</p>
+          </li>
+          <li>
+            <img class="avatar-img" src="assets/team/dn.png" alt="Dinh Nguyen">
+            <p class="person-name">Dinh Nguyen</p>
+            <p class="person-role">UAH</p>
+          </li>
+          <li>
+            <img class="avatar-img" src="assets/team/rs.webp" alt="Ridwan Sakidja">
+            <p class="person-name">Ridwan Sakidja</p>
+            <p class="person-role">MSU</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="team-group">
+        <h3>Mentors</h3>
+        <ul class="people-grid">
+          <li>
+            <img class="avatar-img" src="assets/team/ah.png" alt="Md Arif Hossain">
+            <p class="person-name">Md Arif Hossain</p>
+            <p class="person-role">MTSU</p>
+          </li>
+          <li>
+            <img class="avatar-img" src="assets/team/wm.png" alt="Wasim R Mondal">
+            <p class="person-name">Wasim R Mondal</p>
+            <p class="person-role">MTSU</p>
+          </li>
+          <li>
+            <img class="avatar-img" src="assets/team/am.jpeg" alt="Anirudh Mirmira">
+            <p class="person-name">Anirudh Mirmira</p>
+            <p class="person-role">MTSU</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SUGGESTED READING ============ -->
+  <section id="reading" class="section section-alt">
+    <div class="section-inner">
+      <h2>Suggested reading</h2>
+      <p class="section-intro">
+        <br><br>Nothing here is required before you arrive — the Friday workshops start from first principles.
+        These are just good places to look if you want a head start or want to go deeper after the event.
+      </p>
+
+      <div class="reading-grid">
+        <div class="reading-group">
+          <h3>Foundations</h3>
+          <ul class="reading-list">
+            <li>
+              <p class="reading-title">Quantum Computation and Quantum Information</p>
+              <p class="reading-meta">Michael A. Nielsen and Isaac L. Chuang — the standard graduate reference</p>
+            </li>
+            <li>
+              <p class="reading-title">Quantum Computing: An Applied Approach</p>
+              <p class="reading-meta">Jack D. Hidary — a gentler, code-first introduction</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="reading-group">
+          <h3>Hands-on tools</h3>
+          <ul class="reading-list">
+            <li>
+              <p class="reading-title"><a href="https://quantum.cloud.ibm.com/learning" target="_blank" rel="noopener">IBM Quantum Learning</a></p>
+              <p class="reading-meta">Free courses covering Qiskit, circuits, and quantum algorithms</p>
+            </li>
+            <li>
+              <p class="reading-title"><a href="https://pennylane.ai" target="_blank" rel="noopener">PennyLane</a></p>
+              <p class="reading-meta">Quantum machine learning library, with a codebook and demos</p>
+            </li>
+            <li>
+              <p class="reading-title"><a href="https://quantum.microsoft.com/experience/quantum-katas" target="_blank" rel="noopener">Azure Quantum Katas</a></p>
+              <p class="reading-meta">Self-paced exercises for learning quantum programming</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="reading-group">
+          <h3>Papers and talks</h3>
+          <ul class="reading-list">
+            <li>
+              <p class="reading-title">Quantum Computing in the NISQ Era and Beyond</p>
+              <p class="reading-meta">John Preskill, 2018 — why near-term quantum hardware is hard and interesting</p>
+            </li>
+            <li>
+              <p class="reading-title">Quantum Supremacy Using a Programmable Superconducting Processor</p>
+              <p class="reading-meta">Arute et al., Google AI Quantum, Nature 2019</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="section-inner footer-inner">
+    <div>
+      <p class="footer-brand"><!-- EDIT: event name -->Interstate Quantum Hackathon 2026</p>
+      <!-- EDIT: contact email -->
+      <p>Questions? Write to <a href="mailto:achakrab@mtsu.edu"> achakrab (at) mtsu (dot) edu</a></p>
+    </div>
+    <div class="footer-links">
+      <!-- EDIT: footer links -->
+      <a href="https://github.com/abhijit975/website-hackathon-26" target="_blank" rel="noopener">Challenge repo (Inactive)</a>
+      <a href="#" target="_blank" rel="noopener">Code of conduct</a>
+      <a href="#top">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
